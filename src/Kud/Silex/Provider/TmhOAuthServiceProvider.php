@@ -21,4 +21,8 @@ class TmhOAuthServiceProvider implements ServiceProviderInterface
             $app['autoloader']->registerPrefix('tmhOAuth', $app['tmhoauth.class_path']);
         }
     }
+
+    public function boot(Application $app)
+    {
+    }
 }
