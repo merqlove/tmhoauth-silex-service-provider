@@ -5,6 +5,7 @@ namespace Kud\Silex\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use Themattharris\TmhOAuth;
+use Themattharris\TmhUtilities;
 
 class TmhOAuthServiceProvider implements ServiceProviderInterface
 {
@@ -16,6 +17,10 @@ class TmhOAuthServiceProvider implements ServiceProviderInterface
 
         $app['tmhoauth'] = $app->share(function () use ($app) {
             return new TmhOAuth($app['tmhoauth.config']);
+        });
+
+        $app['tmhoauth.utils'] = $app->share(function () {
+            return new TmhUtilities();
         });
     }
 
