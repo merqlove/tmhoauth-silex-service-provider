@@ -12,7 +12,7 @@ class TmhOAuthServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         if (!isset($app['tmhoauth.config']['consumer_key'], $app['tmhoauth.config']['consumer_secret'])) {
-            throw \new RuntimeException('Config must include consumer_key and consumer_secret');
+            throw new \RuntimeException('Config must include consumer_key and consumer_secret');
         }
 
         $app['tmhoauth'] = $app->share(function () use ($app) {
