@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "themattharris/tmhoauth": "dev-master"
+        "themattharris/tmhOAuth": "dev-master"
     },
     "autoload": {
         "psr-0": {
